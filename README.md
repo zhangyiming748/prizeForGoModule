@@ -4,6 +4,6 @@
 ```
 func main() {
 	ret:=ChooseOne(FILEPATH)
-	fmt.Printf("中奖的这个逼是: %s,大家一起来鄙视他\n",ret)
+	fmt.Println(ret)
 }
 ```
