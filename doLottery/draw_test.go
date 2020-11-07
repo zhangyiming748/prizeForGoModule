@@ -8,8 +8,9 @@ import (
 const FILEPATH = "./list.txt"
 
 func TestChooseOne(t *testing.T) {
-	ret:=ChooseOne(FILEPATH)
-	t.Log(ret)
+	//ret:=ChooseOne(FILEPATH)
+	ChooseOne(FILEPATH)
+	//t.Log(ret)
 }
 func BenchmarkChooseOne(b *testing.B) {
 	b.ResetTimer()
