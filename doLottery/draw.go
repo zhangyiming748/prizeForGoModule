@@ -2,6 +2,7 @@ package doLottery
 
 import (
 	"fmt"
+	"log"
 	"sync"
 
 	"github.com/zhangyiming748/prizeForGoModule/allToSlice"
@@ -22,7 +23,8 @@ func ChooseOne(s string) string {
 		defer func() {
 			wg.Done()
 		}()
-		n := getRandom.GetNum(len(sl))
+		n := getRandom.GetNum1(len(sl))
+		log.Println("选中的随机数是: ",n)
 		v := sl[n]
 		c1 <- v
 	}()
@@ -31,7 +33,8 @@ func ChooseOne(s string) string {
 		defer func() {
 			wg.Done()
 		}()
-		n := getRandom.GetNum(len(sl))
+		n := getRandom.GetNum2(len(sl))
+		log.Println("选中的随机数是: ",n)
 		v := sl[n]
 		c2 <- v
 	}()
@@ -40,7 +43,8 @@ func ChooseOne(s string) string {
 		defer func() {
 			wg.Done()
 		}()
-		n := getRandom.GetNum(len(sl))
+		n := getRandom.GetNum3(len(sl))
+		log.Println("选中的随机数是: ",n)
 		v := sl[n]
 		c3 <- v
 	}()
