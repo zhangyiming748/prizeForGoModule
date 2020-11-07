@@ -1,0 +1,2 @@
+# prizeForGoModule
+简单的一段代码用于学习本地代码上传GitHub和GoMod的使用方法
