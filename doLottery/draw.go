@@ -1,7 +1,6 @@
 package doLottery
 
 import (
-	"fmt"
 	"log"
 	"sync"
 
@@ -50,13 +49,13 @@ func ChooseOne(s string) string {
 	}()
 	select {
 	case ret := <-c1:
-		fmt.Printf("中奖的这个逼是: %s,大家一起来鄙视他\n", ret)
+		//fmt.Printf("中奖的这个逼是: %s,大家一起来鄙视他\n", ret)
 		return ret
 	case ret := <-c2:
-		fmt.Printf("中奖的这个逼是: %s,大家一起来鄙视他\n", ret)
+		//fmt.Printf("中奖的这个逼是: %s,大家一起来鄙视他\n", ret)
 		return ret
 	case ret := <-c3:
-		fmt.Printf("中奖的这个逼是: %s,大家一起来鄙视他\n", ret)
+		//fmt.Printf("中奖的这个逼是: %s,大家一起来鄙视他\n", ret)
 		return ret
 	}
 }
